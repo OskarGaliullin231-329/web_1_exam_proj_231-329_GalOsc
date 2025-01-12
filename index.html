@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Some shop site</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css_styles/index_style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="">
+            <img src="general_images/Some_Shop_logo.jpeg" alt="logo_of_company" id="logo_of_company">
+            <form action="" class="search_bar_form">
+                <textarea name="search_bar" id="search_bar">Введите запрос</textarea>
+                <button type="submit">Найти</button>
+            </form>
+
+            <div class="logo_img_container">
+                <a href="basket.html">
+                    <img src="general_images/shopping_basket_logo.png" alt="shopping_basket"    
+                    class="logo_img">
+                </a>
+                <a href="profile.html">
+                    <img src="general_images/personal_account_logo.jpg" alt="personal_page" 
+                    class="logo_img">
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <div class="sidebar">
+                <form action="">
+                    <h2>Категории</h2>
+                    <div class="categories">
+                        <div class="category_checkbox">
+                            <input type="checkbox" name="category_1">
+                            <label for="category_1">Категория 1</label>
+                        </div>
+                        <div class="category_checkbox">
+                            <input type="checkbox" name="category_2">
+                            <label for="category_1">Категория 2</label>
+                        </div>
+                        <div class="category_checkbox">
+                            <input type="checkbox" name="category_3">
+                            <label for="category_1">Категория 3</label>
+                        </div>
+                        <div class="category_checkbox">
+                            <input type="checkbox" name="category_4">
+                            <label for="category_1">Категория 4</label>
+                        </div>
+                        <div class="category_checkbox">
+                            <input type="checkbox" name="category_5">
+                            <label for="category_1">Категория 5</label>
+                        </div>
+                    </div>
+                    <div class="price_settings">
+                        <h2>Стоимость</h2>
+                        <div class="time_limiter_container">
+                            <div class="time_limiter">
+                                <p>От</p>
+                                <input type="number" name="time_from">
+                            </div>
+                            <div class="time_limiter">
+                                <p>До</p>
+                                <input type="number" name="time_to">
+                            </div>
+                        </div>
+                        <input type="checkbox" name="only_with_discount">
+                        <label for="only_with_discount">Только товары со скидкой</label>
+                    </div>
+    
+                </form>
+            </div>
+            <div class="content_container">
+                <h1>Каталог</h1>
+                <div class="container">
+                    <div class="product">
+                        <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
+                        <p class="product_name">Мягкий мишка</p>
+                        <p class="product_price">Цена: 300 &#8381</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            &copy 2025 Название компании
+        </footer>
+    </body>
+</html>
