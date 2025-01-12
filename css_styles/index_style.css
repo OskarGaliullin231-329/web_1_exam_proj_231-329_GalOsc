@@ -8,7 +8,7 @@ body {
     margin: 0px;
 }
 
-header {
+.interactive_part {
     display: flex;
     justify-content: space-between;
     flex-grow: 0;
@@ -20,25 +20,25 @@ header {
     object-fit: contain;
 }
 
-header img {
+.interactive_part img {
     width: 150px;
     height: auto;
     object-fit: contain;
 }
 
-header form {
+.interactive_part form {
     display: flex;
     align-content: center;
     padding: 10px;
 }
 
-header form textarea {
+.interactive_part form textarea {
     width: 300px;
     margin-right: 10px;
     border-radius: 10px;
 }
 
-header form button {
+.interactive_part form button {
     border-radius: 10px;
 }
 
@@ -46,11 +46,21 @@ header form button {
     display: flex;
 }
 
-.logo_img {
+.interactive_part .logo_img {
     height: 45px; 
     width: auto;
     object-fit: contain;
 }
+
+/* .message_part {
+    background-color: rgb(200, 255, 190);
+    border-top-color: rgb(130, 215, 110);
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-bottom-color: rgb(130, 215, 110);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+} */
 
 main {
     display: flex;
@@ -136,19 +146,18 @@ main {
     flex-direction: column;
     flex-wrap: wrap;
     width: 340px;
-    height: 450px;
     border-radius: 35px;
     border-style: solid;
-    border-color: transparent;
+    border-color: rgb(230, 230, 231);
     border-width: 2px;
-    padding: 20px;
+    padding: 23px;
     filter: drop-shadow(17px 19px 24px rgba(0,0,0,0.13));
-    background-color: rgb(255, 230, 200);
+    background-color: rgb(240, 240, 242);
     cursor: pointer; 
 }
 
 .product img {
-    width: 320px;
+    width: 100%;
     height: auto;
     object-fit: contain;
     border-radius: 25px;
@@ -165,6 +174,17 @@ main {
 
 .product .product_price {
     margin: 0px 0px 0px 5px;
+}
+
+.product .product_btn {
+    height: 35px;
+    font-size: 1.1rem;
+    background-color: rgb(222, 222, 222);
+    margin: 15px 0px 20px 5px;
+    border-radius: 7px;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px;
 }
 
 footer {
