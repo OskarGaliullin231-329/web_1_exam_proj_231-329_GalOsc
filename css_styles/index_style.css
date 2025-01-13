@@ -213,6 +213,7 @@ main {
 }
 
 .product .product_price {
+    font-weight: bold;
     margin: 0px 0px 0px 5px;
 }
 
