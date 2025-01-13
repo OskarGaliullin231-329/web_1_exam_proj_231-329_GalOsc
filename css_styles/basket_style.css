@@ -59,9 +59,11 @@ main h1 {
 
 .content_container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-row-gap: 25px;
     grid-column-gap: 25px;
+    align-items: center;
+    justify-items: center;
     margin: 10px 20px 20px 20px;
 }
 
@@ -225,4 +227,43 @@ footer {
     padding: 30px;
     margin: 0px;
     flex-grow: 0;
+}
+
+@media screen and (width > 850px) and (width <= 1254px) {
+    .content_container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (width <= 850px) {
+    .content_container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (width > 900px) and (width < 1100px) {
+    .simple_input_container {
+        width: 400px;
+    }
+}
+
+@media screen and (width > 700px) and (width <= 900px) {
+    .simple_input_container {
+        width: 300px;
+    }
+}
+
+@media screen and (width > 600px) and (width <= 700px) {
+    .simple_input_container {
+        width: 200px;
+    }
+}
+
+@media screen and (width <= 600px) {
+    .grid_input_container {
+        grid-column-gap: 10px;
+    }
+    .simple_input_container {
+        width: 150px;
+    }
 }
