@@ -2,8 +2,9 @@
 
 <html>
     <head>
-        <title>Some shop site</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SomeShop main</title>
         <link rel="stylesheet" href="css_styles/index_style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,18 +63,20 @@
                     </div>
                     <div class="price_settings">
                         <h2>Стоимость</h2>
-                        <div class="time_limiter_container">
-                            <div class="time_limiter">
+                        <div class="price_limiter_container">
+                            <div class="price_limiter">
                                 <p>От</p>
-                                <input type="number" name="time_from">
+                                <input type="number" name="price_from">
                             </div>
-                            <div class="time_limiter">
+                            <div class="price_limiter">
                                 <p>До</p>
-                                <input type="number" name="time_to">
+                                <input type="number" name="price_to">
                             </div>
                         </div>
                         <input type="checkbox" name="only_with_discount">
                         <label for="only_with_discount">Только товары со скидкой</label>
+
+                        <button>Применить</button>
                     </div>
     
                 </form>
@@ -82,95 +85,144 @@
                 <h1>Каталог</h1>
                 <div class="container">
                     <div class="product">
-                        <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
-                        <p class="product_name">Мягкий мишка</p>
-                        <p class="product_rate">&starf;&starf;&starf;&starf;&starf;</p>
-                        <p class="product_price">Цена: 300 &#8381</p>
-                        <button class="product_btn">Добавить</button>
+                        <div class="upper_part">
+                            <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
+                            <p class="product_name">Мягкий мишка</p>
+                        </div>
+                        <div class="lower_part">
+                            <p class="product_rate">5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                            <p class="product_price">Цена: 300 &#8381</p>
+                            <button class="product_btn">Добавить</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
-                        <p class="product_name">Мягкий мишка</p>
-                        <p class="product_rate">&starf;&starf;&starf;&starf;&starf;</p>
-                        <p class="product_price">Цена: 300 &#8381</p>
-                        <button class="product_btn">Добавить</button>
+                        <div class="upper_part">
+                            <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
+                            <p class="product_name">Мягкий мишка</p>
+                        </div>
+                        <div class="lower_part">
+                            <p class="product_rate">5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                            <p class="product_price">Цена: 300 &#8381</p>
+                            <button class="product_btn">Добавить</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
-                        <p class="product_name">Мягкий мишка</p>
-                        <p class="product_rate">&starf;&starf;&starf;&starf;&starf;</p>
-                        <p class="product_price">Цена: 300 &#8381</p>
-                        <button class="product_btn">Добавить</button>
+                        <div class="upper_part">
+                            <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
+                            <p class="product_name">Мягкий мишка</p>
+                        </div>
+                        <div class="lower_part">
+                            <p class="product_rate">5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                            <p class="product_price">Цена: 300 &#8381</p>
+                            <button class="product_btn">Добавить</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
-                        <p class="product_name">Мягкий мишка</p>
-                        <p class="product_rate">&starf;&starf;&starf;&starf;&starf;</p>
-                        <p class="product_price">Цена: 300 &#8381</p>
-                        <button class="product_btn">Добавить</button>
+                        <div class="upper_part">
+                            <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
+                            <p class="product_name">Мягкий мишка</p>
+                        </div>
+                        <div class="lower_part">
+                            <p class="product_rate">5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                            <p class="product_price">Цена: 300 &#8381</p>
+                            <button class="product_btn">Добавить</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
-                        <p class="product_name">Мягкий мишка</p>
-                        <p class="product_rate">&starf;&starf;&starf;&starf;&starf;</p>
-                        <p class="product_price">Цена: 300 &#8381</p>
-                        <button class="product_btn">Добавить</button>
+                        <div class="upper_part">
+                            <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
+                            <p class="product_name">Мягкий мишка</p>
+                        </div>
+                        <div class="lower_part">
+                            <p class="product_rate">5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                            <p class="product_price">Цена: 300 &#8381</p>
+                            <button class="product_btn">Добавить</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
-                        <p class="product_name">Мягкий мишка</p>
-                        <p class="product_rate">&starf;&starf;&starf;&starf;&starf;</p>
-                        <p class="product_price">Цена: 300 &#8381</p>
-                        <button class="product_btn">Добавить</button>
+                        <div class="upper_part">
+                            <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
+                            <p class="product_name">Мягкий мишка</p>
+                        </div>
+                        <div class="lower_part">
+                            <p class="product_rate">5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                            <p class="product_price">Цена: 300 &#8381</p>
+                            <button class="product_btn">Добавить</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
-                        <p class="product_name">Мягкий мишка</p>
-                        <p class="product_rate">&starf;&starf;&starf;&starf;&starf;</p>
-                        <p class="product_price">Цена: 300 &#8381</p>
-                        <button class="product_btn">Добавить</button>
+                        <div class="upper_part">
+                            <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
+                            <p class="product_name">Мягкий мишка</p>
+                        </div>
+                        <div class="lower_part">
+                            <p class="product_rate">5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                            <p class="product_price">Цена: 300 &#8381</p>
+                            <button class="product_btn">Добавить</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
-                        <p class="product_name">Мягкий мишка</p>
-                        <p class="product_rate">&starf;&starf;&starf;&starf;&starf;</p>
-                        <p class="product_price">Цена: 300 &#8381</p>
-                        <button class="product_btn">Добавить</button>
+                        <div class="upper_part">
+                            <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
+                            <p class="product_name">Мягкий мишка</p>
+                        </div>
+                        <div class="lower_part">
+                            <p class="product_rate">5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                            <p class="product_price">Цена: 300 &#8381</p>
+                            <button class="product_btn">Добавить</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
-                        <p class="product_name">Мягкий мишка</p>
-                        <p class="product_rate">&starf;&starf;&starf;&starf;&starf;</p>
-                        <p class="product_price">Цена: 300 &#8381</p>
-                        <button class="product_btn">Добавить</button>
+                        <div class="upper_part">
+                            <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
+                            <p class="product_name">Мягкий мишка</p>
+                        </div>
+                        <div class="lower_part">
+                            <p class="product_rate">5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                            <p class="product_price">Цена: 300 &#8381</p>
+                            <button class="product_btn">Добавить</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
-                        <p class="product_name">Мягкий мишка</p>
-                        <p class="product_rate">&starf;&starf;&starf;&starf;&starf;</p>
-                        <p class="product_price">Цена: 300 &#8381</p>
-                        <button class="product_btn">Добавить</button>
+                        <div class="upper_part">
+                            <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
+                            <p class="product_name">Мягкий мишка</p>
+                        </div>
+                        <div class="lower_part">
+                            <p class="product_rate">5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                            <p class="product_price">Цена: 300 &#8381</p>
+                            <button class="product_btn">Добавить</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
-                        <p class="product_name">Мягкий мишка</p>
-                        <p class="product_rate">&starf;&starf;&starf;&starf;&starf;</p>
-                        <p class="product_price">Цена: 300 &#8381</p>
-                        <button class="product_btn">Добавить</button>
+                        <div class="upper_part">
+                            <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
+                            <p class="product_name">Мягкий мишка</p>
+                        </div>
+                        <div class="lower_part">
+                            <p class="product_rate">5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                            <p class="product_price">Цена: 300 &#8381</p>
+                            <button class="product_btn">Добавить</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
-                        <p class="product_name">Мягкий мишка</p>
-                        <p class="product_rate">&starf;&starf;&starf;&starf;&starf;</p>
-                        <p class="product_price">Цена: 300 &#8381</p>
-                        <button class="product_btn">Добавить</button>
+                        <div class="upper_part">
+                            <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
+                            <p class="product_name">Мягкий мишка</p>
+                        </div>
+                        <div class="lower_part">
+                            <p class="product_rate">5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                            <p class="product_price">Цена: 300 &#8381</p>
+                            <button class="product_btn">Добавить</button>
+                        </div>
                     </div>
                 </div>
+                <button id="load_more_btn">Загрузить ещё</button>
             </div>
         </main>
 
         <footer>
-            &copy 2025 Название компании
+            &copy 2025 группа компаний <i>Some Shop&#8482;</i>
         </footer>
     </body>
 </html>

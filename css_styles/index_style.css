@@ -8,8 +8,19 @@ body {
     margin: 0px;
 }
 
+header {
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(0, 0, 0);
+}
+
 .interactive_part {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     flex-grow: 0;
 }
@@ -39,7 +50,15 @@ body {
 }
 
 .interactive_part form button {
+    background-color: rgb(222, 222, 222);
     border-radius: 10px;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.interactive_part button:hover {
+    background-color: rgb(185, 210, 255);
 }
 
 .logo_img_container {
@@ -73,13 +92,11 @@ main {
     border-right-width: 2px;
     border-right-style: solid;
     border-right-color: rgb(0, 0, 0);
-    border-top-width: 2px;
-    border-top-style: solid;
-    border-top-color: rgb(0, 0, 0);
 }
 
 .sidebar > * {
     position: sticky;
+    top: 58px;
 }
 
 .sidebar form {
@@ -89,7 +106,7 @@ main {
 }
 
 .sidebar form h2 {
-    margin: 20px 0px 10px 5px;
+    margin: 13px 0px 10px 10px;
 }
 
 .categories {
@@ -101,32 +118,46 @@ main {
     margin: 0px 0px 7px 5px;
 }
 
-.time_limiter_container {
+.price_limiter_container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.time_limiter {
+.price_limiter {
     flex-shrink: 1;
-    margin: 10px;
+    margin: 0px 10px 10px 10px;
 }
 
-.time_limiter p {
+.price_limiter p {
     font-weight: bold;
     font-size: 1rem;
     margin: 0px 0px 5px 3px;
     padding: 0px;
 }
 
-.time_limiter input {
-    width: 100%;
+.price_limiter input {
+    width: 97px;
+}
+
+.price_settings button {
+    font-size: 1.1rem;
+    height: 30px;
+    width: 230px;
+    background-color: rgb(222, 222, 222);
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 7px;
+    margin: 20px 10px 0px 10px;
+}
+
+.price_settings button:hover {
+    background-color: rgb(185, 210, 255);
 }
 
 .content_container {
     flex-grow: 1;
-    border-top-width: 2px;
-    border-top-style: solid;
-    border-top-color: rgb(0, 0, 0);
 }
 
 .content_container h1 {
@@ -144,8 +175,11 @@ main {
 .content_container .container .product {
     display: flex;
     flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 340px;
+    min-height: 520px;
     border-radius: 35px;
     border-style: solid;
     border-color: rgb(230, 230, 231);
@@ -153,7 +187,13 @@ main {
     padding: 23px;
     filter: drop-shadow(17px 19px 24px rgba(0,0,0,0.13));
     background-color: rgb(240, 240, 242);
-    cursor: pointer; 
+    cursor: pointer;
+    -webkit-transition: all 0.15s ease;
+            transition: all 0.15s ease;
+}
+
+.content_container .container .product:hover {
+    border-color: rgb(150, 190, 231);
 }
 
 .product img {
@@ -180,11 +220,33 @@ main {
     height: 35px;
     font-size: 1.1rem;
     background-color: rgb(222, 222, 222);
-    margin: 15px 0px 20px 5px;
+    width: 330px;
+    margin: 15px 0px 5px 5px;
     border-radius: 7px;
     border-color: transparent;
     border-style: solid;
     border-width: 1px;
+    cursor: pointer;
+}
+
+.product .product_btn:hover {
+    background-color: rgb(195, 215, 255);
+}
+
+#load_more_btn {
+    background-color: rgb(222, 222, 222);
+    margin: 0px 20px 10px 10px;
+    width: 200px;
+    height: 35px;
+    font-size: 1.05rem;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    border-radius: 7px;
+}
+
+#load_more_btn:hover {
+    background-color: rgb(185, 210, 255);
 }
 
 footer {
@@ -194,4 +256,37 @@ footer {
     padding: 30px;
     margin: 0px;
     flex-grow: 0;
+}
+
+@media screen and (width > 1417px) and (width < 1526px) {
+    .sidebar {
+        width: 140px;
+    }
+    .price_settings button {
+        width: 120px;
+    }
+}
+
+@media screen and (width > 1000px) and (width <= 1417px) {
+    .content_container .container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .sidebar {
+        width: 140px;
+    }
+    .price_settings button {
+        width: 120px;
+    }
+}
+
+@media screen and (width <= 1000px) {
+    .content_container .container {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        width: 140px;
+    }
+    .price_settings button {
+        width: 120px;
+    }
 }
