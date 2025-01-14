@@ -43,10 +43,13 @@ header {
     padding: 10px;
 }
 
-.interactive_part form textarea {
+.interactive_part form input {
     width: 300px;
     margin-right: 10px;
     border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(100, 100, 100);
 }
 
 .interactive_part form button {
@@ -138,6 +141,11 @@ main {
 
 .price_limiter input {
     width: 97px;
+    height: 21px;
+    border-radius: 7px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(100, 100, 100);
 }
 
 .price_settings button {
@@ -198,9 +206,15 @@ main {
     border-color: rgb(150, 190, 231);
 }
 
-.product img {
-    width: 100%;
-    height: auto;
+.product .upper_part {
+    display: flex;
+    flex-direction: column;
+}
+
+.product .upper_part img {
+    align-self: center;
+    width: auto;
+    height: 339px;
     object-fit: contain;
     border-radius: 25px;
 }

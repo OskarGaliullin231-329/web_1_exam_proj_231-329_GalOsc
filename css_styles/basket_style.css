@@ -23,7 +23,6 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     flex-grow: 0;
-    padding: 0px 0px 11px 0px;
 }
 
 #logo_of_company {
@@ -161,6 +160,7 @@ main h1 {
     border-color: rgb(160, 180, 220);
     border-width: 1px;
     border-radius: 7px;
+    padding-left: 5px;
 }
 
 #mail_assignment {
@@ -185,6 +185,15 @@ main h1 {
     border-color: rgb(160, 180, 220);
     border-width: 1px;
     border-radius: 7px;
+}
+
+.simple_input_container select {
+    height: 42px;
+    border-style: solid;
+    border-color: rgb(160, 180, 220);
+    border-width: 1px;
+    border-radius: 7px;
+    padding-left: 5px;
 }
 
 #full_price_phrase {

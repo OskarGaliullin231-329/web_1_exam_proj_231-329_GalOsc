@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     font-family: "Roboto", sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     min-height: 100vh;
     margin: 0px;
 }
@@ -23,7 +23,6 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     flex-grow: 0;
-    padding: 0px 0px 11px 0px;
 }
 
 #logo_of_company {
@@ -49,7 +48,106 @@ header {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     flex-grow: 1;
+}
+
+main h1 {
+    font-size: 2.4rem;
+    margin: 20px 0px 30px 70px;
+    align-self: start;
+}
+
+.content_container {
+    display: flex;
+    flex-direction: column;
+    width: 1100px;
+    border-style: solid;
+    border-color: rgb(100, 100, 100);
+    border-width: 2px;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.content_container .table_header {
+    display: grid;
+    grid-template-columns: 2fr 7fr 10fr 7fr 6fr 4fr;
+    justify-items: center;
+    font-weight: bold;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(100, 100, 100);
+    border-bottom-width: 1px;
+    padding: 10px;
+}
+
+.table_header .order_header_number {
+    width: 20px;
+}
+
+.content_container .table_row {
+    display: grid;
+    grid-template-columns: 2fr 7fr 10fr 7fr 6fr 4fr;
+    justify-items: center;
+    border-top-style: solid;
+    border-top-color: rgb(100, 100, 100);
+    border-top-width: 1px;
+    padding: 10px;
+}
+
+.table_row > * {
+    margin: 10px 10px 20px 10px;
+}
+
+.table_row .order_delivery_date_time {
+    margin: 5px 0px 0px 0px;
+}
+
+.order_delivery_date_time p {
+    margin: 5px 10px 10px 10px;
+}
+
+.table_row .order_includes {
+    margin: 5px 0px 0px 0px;
+}
+
+.order_includes p {
+    margin: 5px 10px 10px 10px;
+}
+
+.order_buttons_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: space-around;
+}
+
+.order_buttons_container button {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background-color: rgb(222, 222, 222);
+    width: 27px;
+    height: 27px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    border-radius: 7px;
+    margin: 3px;
+}
+
+.order_buttons_container button:hover {
+    background-color: rgb(185, 210, 255);
+}
+
+.order_buttons_container button img {
+    width: 15px;
+    height: auto;
+    object-fit: contain;
+    margin: 0px;
 }
 
 footer {
@@ -59,4 +157,16 @@ footer {
     padding: 30px;
     margin: 0px;
     flex-grow: 0;
+}
+
+@media screen and (width < 1110px) {
+    body {
+        font-size: 0.9rem;
+    }
+    .content_container {
+        width: 97%;
+    }
+    .order_buttons_container {
+        flex-direction: column;
+    }
 }
