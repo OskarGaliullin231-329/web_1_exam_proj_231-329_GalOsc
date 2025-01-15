@@ -159,7 +159,7 @@ footer {
     flex-grow: 0;
 }
 
-@media screen and (width < 1110px) {
+@media screen and (width > 600px) and (width < 1110px) {
     body {
         font-size: 0.9rem;
     }
@@ -168,5 +168,39 @@ footer {
     }
     .order_buttons_container {
         flex-direction: column;
+    }
+}
+
+@media screen and (width <= 600px) {
+    header {
+        width: 100%;
+    }
+    main {
+        width: 100%;
+    }
+    main h1 {
+        font-size: 1.7rem;
+        margin: 10px;
+    }
+    .content_container {
+        width: 96%;
+        font-size: 0.7rem;
+    }
+    .order_buttons_container {
+        flex-direction: column;
+    }
+    .order_buttons_container button {
+        height: 22px;
+        width: 22px;
+    }
+    .order_buttons_container button img {
+        width: 10px;
+        height: auto;
+        object-fit: contain;
+        margin: 0px;
+    }
+    footer {
+        font-size: 0.8rem;
+        padding: 20px;
     }
 }
