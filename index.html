@@ -16,7 +16,7 @@
                 <img src="general_images/Some_Shop_logo.jpeg" alt="logo_of_company" id="logo_of_company">
                 <form action="" class="search_bar_form">
                     <input  type="text" name="search_bar" id="search_bar" placeholder="Введите запрос">
-                    <button type="submit">Найти</button>
+                    <button type="" id="search_btn">Найти</button>
                 </form>
 
                 <div class="logo_img_container">
@@ -82,9 +82,18 @@
                 </form>
             </div>
             <div class="content_container">
-                <h1>Каталог</h1>
+                <div class="content_container_header">
+                    <h1>Каталог</h1>
+                    <select name="sorting_params" id="sorting_params">
+                        <option value="default">Без сортировки</option>
+                        <option value="rating_decreasing">По убыванию рейтинга</option>
+                        <option value="rating_increasing">По возрастанию рейтинга</option>
+                        <option value="price_decreasing">По убыванию цены</option>
+                        <option value="price_increasing">По возрастанию цены</option>
+                    </select>
+                </div>
                 <div class="container">
-                    <div class="product">
+                    <!-- <div class="product">
                         <div class="upper_part">
                             <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
                             <p class="product_name">Мягкий мишка</p>
@@ -104,7 +113,7 @@
                             </div>
                             <button class="product_btn">Добавить</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <button id="load_more_btn">Загрузить ещё</button>
             </div>

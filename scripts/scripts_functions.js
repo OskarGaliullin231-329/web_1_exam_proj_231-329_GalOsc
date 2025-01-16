@@ -1,22 +1,20 @@
-function addToBasket(event) {
-    let actionTarget = event.currentTarget.parentNode.parentNode;
-
-    if (localStorage.getItem("goods_IDs")) {
-        let goodsIDs = localStorage.getItem("goods_IDs").split(",");
-        goodsIDs.push(actionTarget.getAttribute("data-id"));
-        let tmp = new Set();
-
-        goodsIDs.forEach(el => tmp.add(el));
-        goodsIDs = [];
-        tmp.forEach(el => goodsIDs.push(el));
-
-        localStorage.setItem("goods_IDs", goodsIDs);
-        console.log(`ID ${actionTarget.getAttribute("data-id")} of an element is added to localStorage`);
+async function ProdCardJSON(goodID) {
+    let url = `https://edu.std-900.ist.mospolytech.ru/exam-2024-1/api/goods/${goodID}?api_key=737c057b-c5e8-436c-8588-13c96515f475`;
+    let prodCardData = "";
+    try {
+        let response = await fetch(url, {
+            method: "get",
+            mode: "cors"
+        });
+        if (!response.ok) {
+            throw new Error(`Getting prod_cards status: ${response.status}`);
+        }
+        prodCardData = await response.json();
+    } catch(error) {
+        console.error(error.message);
     }
-    else {
-        localStorage.setItem("goods_IDs", [actionTarget.getAttribute("data-id")]);
-        console.log(`ID ${actionTarget.getAttribute("data-id")} of an element is added to localStorage`);
-    }
+
+    return prodCardData;
 }
 
 function starsFromNumber(num) {

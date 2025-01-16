@@ -34,7 +34,7 @@
         <main>
             <h1>Корзина</h1>
             <div class="content_container">
-                <div class="product">
+                <!-- <div class="product">
                     <div class="upper_part">
                         <img src="index_images/teddy_bear_img.avif" alt="product_card_image">
                         <p class="product_name">Мягкий мишка</p>
@@ -54,51 +54,54 @@
                         </div>
                         <button class="product_btn">Удалить</button>
                     </div>
-                </div>
+                </div> -->
             </div>
-            <form action="https://httpbin.org/post" method="post" class="order_form">
+            <form action="" method="post" class="order_form">
+                <input type="hidden" name="good_ids" id="goods_IDs" required>
+                <input type="hidden" name="delivery_date" id="delivery_date" required>
+                <input type="hidden" name="subscribe" id="subscribe" value="0">
                 <h1>Оформление заказа</h1>
                 <div class="grid_input_container">
                     <div class="flex_input_contiainer">
                         <div class="simple_input_container">
                             <label for="full_name" class="input_label">Имя</label>
-                            <input type="text" name="full_name">
+                            <input type="text" name="full_name" id="full_name" required>
                         </div>
 
                         <div class="simple_input_container">
                             <label for="phone">Номер телефона</label>
-                            <input type="tel" name="phone">
+                            <input type="tel" name="phone" id="phone" required>
                         </div>
 
                         <div class="simple_input_container">
                             <label for="email">Email</label>
-                            <input type="email" name="email">
+                            <input type="email" name="email" id="email" required>
                             <div id="mail_assignment">
-                                <input type="checkbox" name="subscribe">
-                                <label for="subscribe">Подписаться на рассылку</label>
+                                <input type="checkbox" name="subscribe_false" id="subscribe_false">
+                                <label for="subscribe_false">Подписаться на рассылку</label>
                             </div>
                         </div>
 
                         <div class="simple_input_container">
-                            <label for="comment">Комментарий</label>
+                            <label for="order_comment">Комментарий</label>
                             <textarea name="comment" id="order_comment"></textarea>
                         </div>
                     </div>
                     <div class="flex_input_contiainer">
                         <div class="simple_input_container">
                             <label for="delivery_address">Адрес доставки</label>
-                            <input type="text" name="delivery_address">
+                            <input type="text" name="delivery_address" id="delivery_address" required>
                         </div>
 
                         <div class="simple_input_container">
-                            <label for="delivery_date">Дата доставки</label>
-                            <input type="date" name="delivery_date">
+                            <label for="delivery_date_false">Дата доставки</label>
+                            <input type="date" id="delivery_date_false" required>
                         </div>
 
                         <div class="simple_input_container">
                             <label for="delivery_interval">Временной интервал доставки</label>
-                            <select>
-                                <option value="8:00-12:00">08:00 - 12:00</option>
+                            <select name="delivery_interval" id="delivery_interval" required>
+                                <option value="8:00-12:00" selected="selected">08:00 - 12:00</option>
                                 <option value="12:00-14:00">12:00 - 14:00</option>
                                 <option value="14:00-18:00">14:00 - 18:00</option>
                                 <option value="18:00-22:00">18:00 - 22:00</option>
@@ -112,7 +115,7 @@
 
                         <div class="final_buttons_container">
                             <button type="reset" id="reset_button">Сбросить</button>
-                            <button type="submit" id="submit_button">Отправить</button>
+                            <button type="" id="submit_button">Отправить</button>
                         </div>
                     </div>
                 </div>
