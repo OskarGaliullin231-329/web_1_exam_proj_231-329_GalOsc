@@ -56,10 +56,10 @@
                     </div>
                 </div> -->
             </div>
-            <form action="" method="post" class="order_form">
+            <form action="" class="order_form">
                 <input type="hidden" name="good_ids" id="goods_IDs" required>
-                <input type="hidden" name="delivery_date" id="delivery_date" required>
-                <input type="hidden" name="subscribe" id="subscribe" value="0">
+                <!-- <input type="hidden" name="delivery_date" id="delivery_date" required> -->
+                <!-- <input type="hidden" name="subscribe" id="subscribe"> -->
                 <h1>Оформление заказа</h1>
                 <div class="grid_input_container">
                     <div class="flex_input_contiainer">
@@ -77,8 +77,8 @@
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" required>
                             <div id="mail_assignment">
-                                <input type="checkbox" name="subscribe_false" id="subscribe_false">
-                                <label for="subscribe_false">Подписаться на рассылку</label>
+                                <input type="checkbox" name="subscribe" id="subscribe">
+                                <label for="subscribe">Подписаться на рассылку</label>
                             </div>
                         </div>
 
@@ -94,8 +94,8 @@
                         </div>
 
                         <div class="simple_input_container">
-                            <label for="delivery_date_false">Дата доставки</label>
-                            <input type="date" id="delivery_date_false" required>
+                            <label for="delivery_date">Дата доставки</label>
+                            <input type="date" name="delivery_date" id="delivery_date" required>
                         </div>
 
                         <div class="simple_input_container">
@@ -115,7 +115,7 @@
 
                         <div class="final_buttons_container">
                             <button type="reset" id="reset_button">Сбросить</button>
-                            <button type="" id="submit_button">Отправить</button>
+                            <button type="submit" id="submit_button">Отправить</button>
                         </div>
                     </div>
                 </div>
