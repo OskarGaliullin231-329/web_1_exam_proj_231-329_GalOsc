@@ -120,16 +120,17 @@ inputField7.addEventListener("input", setFormDataField);
 
 document.addEventListener("DOMContentLoaded", async () => {
     let goodsIDs = localStorage.getItem("goods_IDs");
+    goodsIDs = goodsIDs.split(",");
+    goodsIDs.forEach(el => el = Number(el));
     let totalPriceElement = document.getElementById("full_price_phrase");
     console.log("inners of localStorage:\n", goodsIDs);
 
     // getting goods from server and adding them to html page
     document.getElementById("goods_IDs").value = goodsIDs;
     console.log("value of goods_IDs element", document.getElementById("goods_IDs").value);
-    formData.set("good_ids", goodsIDs);
     formData.set("subscribe", 0);
+    formData.delete("good_ids");
     if (goodsIDs) {
-        goodsIDs = goodsIDs.split(",");
         for (let el of goodsIDs) {
             let prodCardJSON = await ProdCardJSON(el);
             if (prodCardJSON) {
@@ -142,6 +143,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     totalPrice += prodCardJSON.actual_price;
                 }
             }
+            formData.append("good_ids", el);
         }
         totalPrice += 500;
     }

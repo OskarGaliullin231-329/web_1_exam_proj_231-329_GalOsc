@@ -150,6 +150,131 @@ main h1 {
     margin: 0px;
 }
 
+#see_modal_window, #correct_modal_window {
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
+    align-self: center;
+    width: 450px;
+    background-color: rgb(235, 245, 255);
+    border-style: solid;
+    border-color: rgb(100, 100, 100);
+    border-width: 2px;
+    border-radius: 20px;
+}
+
+#correct_modal_window input, #correct_modal_window select,
+#correct_modal_window textarea {
+    font-size: 0.9rem;
+    min-height: 30px;
+    max-width: 250px;
+    border-style: solid;
+    border-color: rgb(190, 200, 240);
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#delete_modal_window {
+    /* display: none; */
+    position: sticky;
+    top: 180px;
+    align-self: center;
+    z-index: 1000;
+    width: 300px;
+    background-color: rgb(235, 245, 255);
+    border-style: solid;
+    border-color: rgb(100, 100, 100);
+    border-width: 2px;
+    border-radius: 20px;
+}
+
+#delete_modal_window .modal_window_content_container {
+    font-size: 0.9rem;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.modal_window_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(100, 100, 100);
+    border-bottom-width: 1px;
+}
+
+.modal_window_header p {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0px;
+    margin: 10px;
+} 
+
+.modal_window_header button {
+    width: 40px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgb(255, 60, 40);
+    background-color: rgb(235, 245, 255);
+    border-style: solid;
+    border-color: rgb(235, 245, 255);
+    border-radius: 0px;
+    border-top-right-radius: 18px;
+    -webkit-transition: all 0.15s ease;
+            transition: all 0.15s ease;
+}
+
+.modal_window_header button:hover {
+    background-color: rgb(255, 60, 40);
+    border-color: rgb(255, 60, 40);
+    color: rgb(255, 255, 255);
+}
+
+.modal_window_content_container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.order_parameter_name {
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0px;
+    margin: 10px 10px 10px 27px;
+}
+
+.order_created_at, .order_full_name, .order_phone, .order_email,
+.order_delivery_address, .order_delivery_date, 
+.order_delivery_interval, .order_good_ids, .order_total,
+.order_comment, .order_total_price {
+    font-size: 0.9rem;
+    padding: 0px;
+    margin: 10px 27px 10px 10px;
+}
+
+.modal_window_buttons_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 20px 8px 20px;
+}
+
+.modal_window_buttons_container .confirm_button {
+    background-color: rgb(222, 222, 222);
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.modal_window_buttons_container .confirm_button:hover {
+    background-color: rgb(185, 210, 255);
+}
+
 footer {
     text-align: center;
     background-color: rgb(0, 0, 0);
